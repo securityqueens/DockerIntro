@@ -11,6 +11,7 @@ RUN apt-get install -y apache2
 WORKDIR /var/www/html
 COPY index.html .
 
+#Note to self try chmod 755 to reduce permissions
 EXPOSE 80
 COPY start.sh /start.sh
 RUN chmod 777 /start.sh
